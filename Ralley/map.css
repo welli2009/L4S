@@ -1,0 +1,82 @@
+body {
+    overflow: hidden;
+}
+    .main {
+        display: grid;
+        grid-template-rows: auto 40px 1fr; /* Drei Zeilen */
+        gap: 10px; /* Abstand zwischen den Zeilen */
+        position: relative;
+    }
+
+#Willkommen {
+    text-align: center;
+}
+#map-container {
+   grid-row: 3;
+   height: 1000px;
+   position: relative;
+   
+}
+
+#links-container {
+   grid-row: 1;
+   margin-top: 10px;
+   text-align: center;
+   color: red;
+}
+
+#menu {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    background-color: #000000;
+}
+
+
+.point-link {
+   margin: 5px;
+   display: inline-block;
+   text-decoration: none;
+   padding: 5px 10px;
+   border: 1px solid #ccc;
+   color: rgb(209, 209, 209); /* �ndern Sie die Textfarbe auf Wei� oder eine passende Farbe f�r den Darkmode */
+   background-color: #000000; /* �ndern Sie die Hintergrundfarbe auf eine dunkle Farbe */
+   cursor: not-allowed;
+   border-radius: 5px;
+}
+
+.point-link.unlocked,
+.point-link.solved {
+   cursor: pointer;
+   color: #00ff00; /* �ndern Sie die Textfarbe auf Gr�n oder eine passende Farbe f�r den Darkmode */
+   /* Hintergrundfarbe nach Bedarf anpassen */
+   border-radius: 5px;
+
+}
+
+.connection-line {
+   stroke: blue;
+   stroke-width: 2;
+}
+.leaflet-layer,
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out,
+.leaflet-control-attribution {
+  filter: invert(100%) hue-rotate(180deg) brightness(95%) contrast(90%);
+}
+    #reload-button {
+        grid-row:2;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: white;
+        padding: 10px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+
+    #reload-button img {
+        width: 20px;
+        height: 20px;
+    }
