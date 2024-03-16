@@ -31,23 +31,21 @@
     width: 20%;
 }
 
-.fragentabelle{
+.korrekturtable{
     background-color:black;
     border-width:10px;
     border: solid 3px #525252;
-    width:40%;
-    padding:20px;
-    padding-top:20px;
-    top:110%;
+    width:85%;
     border-radius:10px;
     font-size:20px;
     position:absolute;
     left:50%;
+    top: 25%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
 
-.fragentabelle table {
+.korrekturtable table {
     width: 100%;
     table-layout: fixed;
     border-collapse: collapse;
@@ -55,14 +53,15 @@
     border-radius: 10px;
 }
 
-.fragentabelle th,
-.fragentabelle td {
+.korrekturtable th,
+.korrekturtable td {
     border: 0.5px solid #2e2e2e;
     padding: 8px;
     text-align: left;
+    word-wrap: break-word; /* Hier wird der Zeilenumbruch definiert */
 }
 
-.fragentabelle th {
+.korrekturtable th {
     background-color: #3f3f3f;
     color: white;
 }
