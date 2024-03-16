@@ -1,81 +1,91 @@
-.layout{
-    background-color:black;
-    border-width:10px;
-    border: solid 3px #6b6b6b;
-
-    width:40%;
-
-    padding:20px;
-    padding-top:0px;
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
-    border-radius:10px;
-    font-size:20px;
-}
-
-#stationname, #ncord, #ocord{
-    background-color: rgb(39, 39, 39);
-    border-color: rgb(82, 82, 82);
-}
-
-#erstellen{
-    background-color: rgb(39, 39, 39);
-    border-color: rgb(82, 82, 82);
-    color: #807f7f;
-}
-
-#ncord, #ocord{
-    width: 20%;
-}
-
-.stationentabelle{
-    background-color:black;
-    border-width:10px;
-    border: solid 3px #525252;
-    width:40%;
-    padding:20px;
-    padding-top:20px;
-    top:110%;
-    border-radius:10px;
-    font-size:20px;
-    position:absolute;
-    left:50%;
-    transform: translate(-50%,-50%);
-    text-align: center;
-}
-.stationentabelle table {
-    width: 100%;
-    table-layout: fixed;
-    border-collapse: collapse;
-    overflow: hidden; /* Verhindert, dass die abgerundeten Ecken �ber den Hintergrund hinausragen */
-    border-radius: 10px; /* Radius f�r die abgerundeten Ecken der Tabelle */
-}
-
-.stationentabelle th, .stationentabelle td {
-    border: 0.5px solid #2e2e2e; /* Optional: Hinzuf�gen von Zellenr�ndern */
-    padding: 8px;
-    text-align: left;
-}
-
-
-/* Optional: Styling f�r den Tabellenkopf (th) */
-.stationentabelle th {
-    background-color: #3f3f3f;
-    color: white;
-}
-
-
-.hinweis{
-    color: rgb(255, 0, 0) !important;
-    font-size: 25px;
-}
-.fragentabelle td {
-    border: 0.5px solid white; /* �ndere dies nach Bedarf */
-    padding: 8px;
-    text-align: left;
-    white-space: nowrap; /* Verhindert Zeilenumbr�che */
-    overflow: hidden; /* Zeigt keinen �berlauf an */
-    text-overflow: ellipsis; /* F�gt ein Auslassungssymbol (...) hinzu, wenn der Text abgeschnitten wird */
-}
+body {
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.progressbar  {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 1vh;
+    height: 2.5vh;
+    padding: 0;
+    font-size: 2vh;
+}
+
+.leftbar {
+    flex-grow: 1;
+    clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
+    margin: 0;
+}
+
+.middlebar {
+    flex-grow: 1;
+    margin: 0;
+}
+
+.rightbar {
+    flex-grow: 1;
+    clip-path: polygon(0 0, 0 100%, 90% 100%, 100% 0);
+    margin: 0;
+}
+
+.finished {
+    background-color: lightblue;
+}
+
+.skip {
+    background-color: gray;
+}
+
+.pending {
+    background-color: blue;
+}
+
+.home {
+    flex-grow: 0.5;
+    background-color: rgb(177, 177, 228);
+    color: white;
+    margin: 0;
+}
+
+.frage {
+    
+    display: flex;
+    margin-top: 40.5vh;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 7vh;
+    color: #00e078;
+    
+}
+
+.antwort {
+    
+    display: flex;
+    margin-top: 3vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.antwort input{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    font-size: 4vh;
+    width: 70%;
+    border-color: #444444;
+}
+.antwort button{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-size: 4vh;
+    width: auto;
+    background-color: #444444;
+    color: white;
+    border-color: #444444;
+	line-height: 1.3;
+}
